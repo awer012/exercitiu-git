@@ -16,7 +16,7 @@ def port_valid(text):
     try:
         return int(text)
     except ValueError:
-        return None
+        return None #am corectat linia ca sa se afle in interiorul blocului except
 
 
 def pe_servicii(tinte):
@@ -49,7 +49,7 @@ def main():
     a = p.parse_args()
 
     tinte = incarca(a.fisier)
-    print("Tinte citite: " + len(tinta))
+    print("Tinte citite: " + len(tinte)) #am schimbat numele sa fie corect : din tinta in tinte
 
     grupe = pe_servicii(tinte)
     for serviciu, porturi in grupe.items():
