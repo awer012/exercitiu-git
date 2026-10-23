@@ -37,8 +37,8 @@ def peste_prag(tinte, prag):
     """Lista gazdelor cu un port mai mare decat pragul."""
     rezultat = []
     for t in tinte:
-        port = int(t["port"])
-        if port > int(prag): #am transformat variabila prag in int pentru a fi comparata
+        port = port_valid(t["port"])
+        if port is not None and port > int(prag): #exista deja o functie care trateza portul invalid
             rezultat.append(t["gazda"])
     return rezultat #nu trebuie sa se afle in interiorul buclei for
 
