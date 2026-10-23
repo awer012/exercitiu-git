@@ -5,7 +5,7 @@ import argparse
 import json
 
 
-def incarca(cale)
+def incarca(cale): #lipseau :(2 puncte) la declararea functiei
     """Citeste lista de tinte din fisierul JSON."""
     with open(cale) as f:
         return json.load(f)
