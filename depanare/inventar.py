@@ -37,7 +37,7 @@ def peste_prag(tinte, prag):
     rezultat = []
     for t in tinte:
         port = int(t["port"])
-        if port > prag:
+        if port > int(prag): #am transformat variabila prag in int pentru a fi comparata
             rezultat.append(t["gazda"])
         return rezultat
 
