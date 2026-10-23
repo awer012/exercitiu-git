@@ -28,7 +28,8 @@ def pe_servicii(tinte):
         if port is None:
             print("sar peste", t["gazda"], ": port invalid", t["port"])
             continue
-        grupe[serviciu] = []
+        if serviciu not in grupe:
+            grupe[serviciu] = []
         grupe[serviciu].append(port)
     return grupe #functia nu returna dictionarul deci el nu putea fi utilizat in alte operatii
 
