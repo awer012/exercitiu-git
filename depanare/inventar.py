@@ -28,8 +28,8 @@ def pe_servicii(tinte):
         if port is None:
             print("sar peste", t["gazda"], ": port invalid", t["port"])
             continue
-        if serviciu not in grupe:
-            grupe[serviciu] = []
+        if serviciu not in grupe: #am adaugat un if fiindca list se reseta de fiecare data
+            grupe[serviciu] = [] 
         grupe[serviciu].append(port)
     return grupe #functia nu returna dictionarul deci el nu putea fi utilizat in alte operatii
 
@@ -40,7 +40,7 @@ def peste_prag(tinte, prag):
         port = int(t["port"])
         if port > int(prag): #am transformat variabila prag in int pentru a fi comparata
             rezultat.append(t["gazda"])
-        return rezultat
+    return rezultat #nu trebuie sa se afle in interiorul buclei for
 
 
 def main():
