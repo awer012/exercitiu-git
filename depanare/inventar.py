@@ -49,7 +49,7 @@ def main():
     a = p.parse_args()
 
     tinte = incarca(a.fisier)
-    print("Tinte citite: " + len(tinte)) #am schimbat numele sa fie corect : din tinta in tinte
+    print(f"Tinte citite: {len(tinte)}") #am folosit un f string pentru a afisa mesajul
 
     grupe = pe_servicii(tinte)
     for serviciu, porturi in grupe.items():
